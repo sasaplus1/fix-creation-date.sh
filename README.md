@@ -2,11 +2,11 @@
 
 fix `creation_date` metadata within mp4 from filename(for the Nintendo Switch)
 
-## requires
+## Requires
 
 - [ffmpeg](https://www.ffmpeg.org/)
 
-## how to use
+## How to use
 
 ```console
 $ ls -1 *.mp4
