@@ -15,6 +15,11 @@ build: ## build Docker image
 	DOCKER_BUILDKIT=1 docker build --tag $(tag) .
 
 .PHONY: run
-run: options := --volume $$(pwd)/share:/root/share --interactive --rm --tty
-run: ## run Docker container and attach TTY
+run: options := --volume $$(pwd)/share:/root/share --rm
+run: ## run Docker container
+	docker run $(options) $(tag)
+
+.PHONY: i-run
+i-run: options := --volume $$(pwd)/share:/root/share --interactive --rm --tty
+i-run: ## run Docker container and attach TTY
 	docker run $(options) $(tag) /bin/bash
