@@ -55,10 +55,10 @@ __main() {
   if date --utc 1>/dev/null 2>&1 && :
   then
     # NOTE: for GNU
-    local time=$(date --utc --date "${new_date}Z+09:00" +"${format}")
+    time=$(date --utc --date "${new_date}Z+09:00" +"${format}")
   else
     # NOTE: for BSD
-    local time=$(date -j -v-9H -f "${format}" "${new_date}" +"${format}")
+    time=$(date -j -v-9H -f "${format}" "${new_date}" +"${format}")
   fi
 
   printf -- '%s\n' "processing to ${filename}..."
