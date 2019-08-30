@@ -11,6 +11,8 @@ fix `creation_date` metadata within mp4 from filename(for the Nintendo Switch)
 
 ## How to use
 
+### Shell script
+
 ```console
 $ ls -1 *.mp4
 2018072819214100-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.mp4
@@ -23,6 +25,20 @@ $ ls -1 *.mp4
 2018072820212500-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.mp4
 2018072820303200-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.mp4
 $ ls -1 *.mp4 | xargs -n 1 ./fix-creation-date.sh
+```
+
+### Docker
+
+put MP4 files to `share` directory, and execute below:
+
+```console
+$ make pull-run
+```
+
+or
+
+```console
+$ make build run
 ```
 
 ## License
