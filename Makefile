@@ -2,7 +2,8 @@
 
 SHELL := /bin/bash
 
-makefile := $(abspath $(lastword $(MAKEFILE_LIST)))
+makefile     := $(abspath $(lastword $(MAKEFILE_LIST)))
+makefile_dir := $(dir $(makefile))
 
 tag := fix-creation-date
 
@@ -14,12 +15,14 @@ all: ## output targets
 build: ## build Docker image
 	DOCKER_BUILDKIT=1 docker build --tag $(tag) .
 
+.PHONY: pull-run
+pull-run: image := sasaplus1/$(tag)
+pull-run: options := --rm --volume $$(pwd)/share:/root/share
+pull-run: ## pull Docker image and run
+	docker pull $(image)
+	docker run $(options) $(image)
+
 .PHONY: run
-run: options := --volume $$(pwd)/share:/root/share --rm
+run: options := --rm --volume $$(pwd)/share:/root/share --rm
 run: ## run Docker container
 	docker run $(options) $(tag)
-
-.PHONY: i-run
-i-run: options := --volume $$(pwd)/share:/root/share --interactive --rm --tty
-i-run: ## run Docker container and attach TTY
-	docker run $(options) $(tag) /bin/bash
