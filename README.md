@@ -1,7 +1,7 @@
-# fix-creation-date
+# fix-creation-date.sh
 
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sasaplus1/fix-creation-date.svg)](https://hub.docker.com/r/sasaplus1/fix-creation-date)
-[![renovate](https://badges.renovateapi.com/github/sasaplus1/fix-creation-date)](https://renovatebot.com)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sasaplus1/fix-creation-date.sh.svg)](https://hub.docker.com/r/sasaplus1/fix-creation-date.sh)
+[![renovate](https://badges.renovateapi.com/github/sasaplus1/fix-creation-date.sh)](https://renovatebot.com)
 
 fix `creation_date` metadata within mp4 from filename(for the Nintendo Switch)
 
