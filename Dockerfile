@@ -8,4 +8,4 @@ COPY ./fix-creation-date.sh ./fix-creation-date.sh
 
 RUN chmod +x ./fix-creation-date.sh
 
-CMD ["bash", "-c", "'ls -1 ./share/*.mp4 | xargs -n 1 ./fix-creation-date.sh'"]
+CMD ["bash", "-c", "find ./share -type f -iname \\*.mp4 | xargs -n 1 ./fix-creation-date.sh"]
