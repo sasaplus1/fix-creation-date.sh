@@ -1,0 +1,18 @@
+version: '3.4'
+
+x-base: &base
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: sasaplus1/fix-creation-date
+  volumes:
+    - ./share:/root/share
+
+services:
+  run:
+    <<: *base
+  sh:
+    <<: *base
+    command:
+      - sh
+    tty: true

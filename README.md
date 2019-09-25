@@ -32,13 +32,7 @@ $ ls -1 *.mp4 | xargs -n 1 ./fix-creation-date.sh
 put MP4 files to `share` directory, and execute below:
 
 ```console
-$ make pull-run
-```
-
-or
-
-```console
-$ make build run
+$ make run
 ```
 
 ## License
