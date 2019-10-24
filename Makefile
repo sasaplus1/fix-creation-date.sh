@@ -18,3 +18,7 @@ run: ## run Docker container
 sh: options := --rm
 sh: ## run Docker container and connect to inside
 	docker-compose run $(options) $@
+
+.PHONY: test
+test: ## lint shell script with shellcheck
+	docker run --rm -v "$$(pwd):/mnt" koalaman/shellcheck:stable fix-creation-date.sh
