@@ -36,7 +36,9 @@ __main() {
     return 1
   fi
 
-  local filename=$(basename "$file")
+  local filename
+
+  filename=$(basename "$file")
 
   local YYYY=${filename:0:4} # YYYY
   local MM=${filename:4:2}   # MM
@@ -74,4 +76,4 @@ __main() {
 
   unset -f __main
 }
-__main $1
+__main "$1"
