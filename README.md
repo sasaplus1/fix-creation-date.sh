@@ -1,6 +1,6 @@
 # fix-creation-date.sh
 
-[![test](https://github.com/sasaplus1/fix-creation-date.sh/workflows/test/badge.svg)](https://github.com/sasaplus1/fix-creation-date.sh)
+[![test](https://github.com/sasaplus1/fix-creation-date.sh/workflows/test/badge.svg)](https://github.com/sasaplus1/fix-creation-date.sh/actions?query=workflow%3Atest)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/sasaplus1/fix-creation-date.sh.svg)](https://hub.docker.com/r/sasaplus1/fix-creation-date.sh)
 [![renovate](https://badges.renovateapi.com/github/sasaplus1/fix-creation-date.sh)](https://renovatebot.com)
 
