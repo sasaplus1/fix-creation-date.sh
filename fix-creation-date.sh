@@ -72,7 +72,7 @@ __main() {
   local new_file="${file_without_extension}_new.${extension}"
 
   # NOTE: update creation_time
-  ffmpeg -i "${file}" -metadata creation_time="${time}" -vcodec copy -acodec copy "${new_file}"
+  ffmpeg -i "${file}" -metadata creation_time="${time}" -vcodec copy -acodec copy "${new_file}" < /dev/null
 
   unset -f __main
 }
