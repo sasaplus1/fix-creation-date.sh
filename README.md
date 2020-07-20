@@ -30,10 +30,9 @@ $ ls -1 *.mp4 | xargs -n 1 ./fix-creation-date.sh
 
 ### Docker
 
-put MP4 files to `share` directory, and execute below:
-
 ```console
-$ make run
+$ make build
+$ ls -1 *.mp4 | xargs -n 1 docker run --rm -v "$PWD:/mnt" sasaplus1/fix-creation-date.sh
 ```
 
 ## License
