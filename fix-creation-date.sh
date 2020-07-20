@@ -22,9 +22,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-set -e
-set -u
-set -o pipefail
+set -euo pipefail
 
 trap 'printf -- "%s\n" "ERROR: line no = $LINENO, exit status = $?" >&2; exit 1' ERR
 
