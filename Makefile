@@ -23,7 +23,7 @@ help: ## output how to execute
 
 .PHONY: sh
 sh: ## run Docker container and connect to inside
-	docker run -it --rm -v "$$PWD:/mnt" --entrypoint '' $(slug) bash
+	docker run -it --rm -v "$$PWD:/mnt" --entrypoint bash $(slug)
 
 .PHONY: test
 test: ## lint shell script with shellcheck
